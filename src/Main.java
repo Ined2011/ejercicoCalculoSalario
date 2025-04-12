@@ -3,21 +3,11 @@ import  java.util.Scanner; /*Importo la biblioteca para usar el Scanner*/
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in); /*Capturar valores por teclado*/
-        String nombreEmpleado = "";
-        String documentoEmpleado = "";
-        double salarioBruto = 0;
-        double salarioNeto = 0;
-        double valorHora = 0;
-        double cantidadHoras = 0;
-        double deduccionSalud = 0;
-        double deduccionPension = 0;
-        double horasExtras = 0;
-        double valorHorasExtras = 0;
-        double bonificacion = 0;
-        double fondoSolidaridadPensional = 0;
-        double valorRetencionFuente = 0;
-        double auxilioTransporte = 0;
-        double salarioMinimo = 0;
+        String nombreEmpleado = "", documentoEmpleado = "";
+        double salarioBruto, salarioNeto = 0,valorHora = 0, cantidadHoras = 0, deduccionSalud = 0,deduccionPension = 0, horasExtras = 0, valorHorasExtras = 0;
+        double bonificacion = 0, fondoSolidaridadPensional = 0, valorRetencionFuente = 0, auxilioTransporte = 0, salarioMinimo = 0;
+
+
 
         System.out.println("Ingrese el nombre del empleado: ");
         nombreEmpleado = sc.nextLine();
@@ -29,6 +19,8 @@ public class Main {
         cantidadHoras = sc.nextDouble();
         System.out.println("Ingrese el valor del salario mínimo actul: ");
         salarioMinimo = sc.nextDouble();
+
+
 
 
         if (cantidadHoras >= 24) {
@@ -45,6 +37,7 @@ public class Main {
                 auxilioTransporte = 0;
                 bonificacion = 0;
             }
+
 if (cantidadHoras > 96){
     horasExtras = cantidadHoras - 96;
     valorHorasExtras = (valorHora * 0.25) * horasExtras;
